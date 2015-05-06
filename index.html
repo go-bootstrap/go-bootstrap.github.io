@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>go-bootstrap: Generates a lean and mean Go web project</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bootstrap/themes/flatly/bootstrap.min.css">
+
+        <style>
+        h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
+            font-size: 30%;
+        }
+        ol, ul {
+            padding-left: 15px;
+        }
+        ol li, ul li {
+            margin-bottom: 12px;
+        }
+        .jumbotron {
+            padding: 30px 0 36px;
+        }
+        .jumbotron p {
+            margin-bottom: 20px;
+        }
+        .download-buttons {
+            margin-bottom: 15px;
+        }
+        .column {
+            margin-bottom: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 90%;
+        }
+
+        @media(max-width:768px) {
+            .btn,.btn-group {
+                width:100%;
+            }
+            .jumbotron .version {
+                display: none;
+            }
+            .column {
+                margin-bottom: 24px;
+            }
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1>go-bootstrap</h1>
+                        <p>Generates a lean and mean Go web project.</p>
+
+                        <div class="row">
+                            <div class="col-lg-12 download-buttons">
+                                <a class="btn btn-primary btn-lg" target="_blank" href="https://github.com/didip/go-bootstrap"><i class="fa fa-github"></i> Source Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-tout">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-lg-6 col-sm-6 column">
+                        <div class="row">
+                            <div class="col-lg-12 column">
+                                <h3><i class="fa fa-magic"></i>&nbsp;&nbsp;Get Started</h3>
+                                <ol>
+                                    <li>git clone git@github.com:didip/go-bootstrap.git</li>
+
+                                    <li>go run main.go -dir github.com/$GIT_USER/$PROJECT_NAME</li>
+
+                                    <li>cd $GOPATH/src/github.com/$GIT_USER/$PROJECT_NAME && go run main.go</li>
+                                </ol>
+                            </div>
+
+                            <div class="col-lg-12 column">
+                                <h3><i class="fa fa-github"></i>&nbsp;&nbsp;Open Source</h3>
+                                <p>go-bootstrap is released under the MIT License and maintained by the community on <a target="_blank" href="http://github.com/didip/go-bootstrap">GitHub</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-sm-6 column">
+                        <h3><i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;Decisions It Made</h3>
+                        <ul>
+                            <li>PostgreSQL is chosen for the database.</li>
+                            <li>Bootstrap Flatly is chosen for the UI theme.</li>
+                            <li>Static directory is located under /static.</li>
+                            <li>Model directory is located under /dal (Database Access Layer).</li>
+                            <li>It does not use ORM nor installs one.</li>
+                            <li>Test database is automatically created.</li>
+                            <li><a target="_blank" href="https://github.com/gorilla">github.com/gorilla</a> is chosen for a lot of the HTTP plumbings.</li>
+                            <li><a target="_blank" href="https://github.com/carbocation/interpose">github.com/carbocation/interpose</a> is chosen as the middleware library.</li>
+                            <li><a target="_blank" href="https://github.com/mattes/migrate">github.com/mattes/migrate</a> is chosen as the database migration tool.</li>
+                            <li><a target="_blank" href="https://github.com/Sirupsen/logrus">github.com/Sirupsen/logrus</a> is chosen as the logging library.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="container text-center">
+                <p class="text-muted">
+                    Created by <a target="_blank" href="https://twitter.com/didip">Didip Kerabat</a>. Written in <a target="_blank" href="http://golang.org/">Go programming language</a>.
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
