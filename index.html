@@ -10,6 +10,9 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="bootstrap/themes/flatly/bootstrap.min.css">
+        <link rel="stylesheet" href="prism/prism.css">
+
+        <script src="prism/prism.js"></script>
 
         <style>
         h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
@@ -89,13 +92,19 @@
 
                             <div class="col-lg-12 column">
                                 <h3><i class="fa fa-magic"></i>&nbsp;&nbsp;Get Started</h3>
-                                <ol>
-                                    <li>git clone git@github.com:go-bootstrap/go-bootstrap.git</li>
 
-                                    <li>go run main.go -dir github.com/$GIT_USER/$PROJECT_NAME</li>
+                                <pre class="code"><code class="language-bash"># 1. Fetch go-bootstrap
+go get github.com/go-bootstrap/go-bootstrap
 
-                                    <li>cd $GOPATH/src/github.com/$GIT_USER/$PROJECT_NAME && go run main.go</li>
-                                </ol>
+# 2. cd to go-bootstrap
+cd $GOPATH/src/github.com/go-bootstrap/go-bootstrap
+
+# 3. Generate new project
+go run main.go -dir github.com/$GIT_USER/$PROJECT_NAME
+
+# 4. Go to your project and run it.
+cd $GOPATH/src/github.com/$GIT_USER/$PROJECT_NAME && go run main.go
+</code></pre>
                             </div>
 
                             <div class="col-lg-12 column">
