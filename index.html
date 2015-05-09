@@ -94,13 +94,10 @@
                                 <pre class="code"><code class="language-bash"># 1. Fetch go-bootstrap
 go get github.com/go-bootstrap/go-bootstrap
 
-# 2. cd to go-bootstrap
-cd $GOPATH/src/github.com/go-bootstrap/go-bootstrap
+# 2. Generate new project
+$GOPATH/bin/go-bootstrap -dir github.com/$GIT_USER/$PROJECT_NAME
 
-# 3. Generate new project
-go run main.go -dir github.com/$GIT_USER/$PROJECT_NAME
-
-# 4. Go to your project and run it.
+# 3. Go to your project and run it.
 cd $GOPATH/src/github.com/$GIT_USER/$PROJECT_NAME && go run main.go
 </code></pre>
                             </div>
